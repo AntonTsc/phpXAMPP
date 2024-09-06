@@ -7,6 +7,19 @@
         - Entre 9 y 10: sobresaliente
         - Si no ERROR. */
 
-    $num = 10;
-    
+    $num = 5.6;
+
+    if($num >= 1 && $num <= 4.9){
+        echo "Suspenso";
+    } else if ($num >= 5 && $num <= 5.9) {
+        echo "Suficiente";
+    } else if ($num >= 6 && $num <= 6.9) {
+        echo "Bien";
+    } else if ($num >= 7 && $num <= 8.9) {
+        echo "Muy bien";
+    } else if ($num >= 9 && $num <= 10) {
+        echo "Sobresaliente";
+    } else {
+        echo "ERROR";
+    }
 ?>

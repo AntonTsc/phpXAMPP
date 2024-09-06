@@ -7,6 +7,6 @@
 
     if( ($num1 > $num2) && ($num1 > $num3) ){
         echo $num1;
-        if
+        
     }
 ?>
