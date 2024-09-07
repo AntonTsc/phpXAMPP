@@ -1,1 +1,1 @@
-Terminar el ejercicio 4, y hacer los que quedan a partir del 10
+Terminar ejercicios a partir del 13
