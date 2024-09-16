@@ -17,8 +17,7 @@
     print_r($nums);
 
     echo "<br> Relación de números aleatorios al reves <br>";
-    //array_reverse($nums);
-    //for($i = 0; $i < count($nums); $nums[]++){
-    //    echo $nums[$i], " ";
-    //}
+    for($i = count($nums) -1; $i >= 0; $i--){
+        echo $nums[$i], " ";
+    }
 ?>
