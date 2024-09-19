@@ -10,16 +10,38 @@
     "emilio" => "Emilio Morales",
     "feo" => "Francisco Cascales");
 
-    //ksort($users); //Ordenar por clave (letras)
-    //natsort($users); //Ordenar por valor (numeros)
-
-    echo "<h1>Array asociativo</h1><h3>Mostrar el array</h3><br>";
+    echo "<h1>Array asociativo</h1><h2>Mostrar el array</h2>";
     foreach($users as $user => $valor){
-        echo "$user <br> $valor" . "";
+        echo "$user <br>";
+        $padding = 10;
+        if ($padding > 0) {
+            echo str_repeat("&nbsp;", $padding);
+        }
+
+        echo "$valor <br>";
     }
 
-    /*foreach($abc as $letra => $num){
-        echo "$letra = $num <br>";
-    }*/
-        
+    echo "<h2>Ordenar por la clave</h2>";
+    ksort($users); //Ordenar por clave (letras)
+    foreach($users as $user => $valor){
+        echo "$user <br>";
+        $padding = 10;
+        if ($padding > 0) {
+            echo str_repeat("&nbsp;", $padding);
+        }
+
+        echo "$valor <br>";
+    }
+
+    echo "<h2>Ordenar por contenido</h2>";
+    natsort($users); //Ordenar por valor (numeros)
+    foreach($users as $user => $valor){
+        echo "$user <br>";
+        $padding = 10;
+        if ($padding > 0) {
+            echo str_repeat("&nbsp;", $padding);
+        }
+
+        echo "$valor <br>";
+    }
 ?>
