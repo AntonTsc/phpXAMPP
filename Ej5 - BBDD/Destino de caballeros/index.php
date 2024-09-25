@@ -50,7 +50,7 @@
                     </td>
                     <td>
                         <a href="#" class="btn btn-info btn-sm">Ver</a>
-                        <a href="#" class="btn btn-warning btn-sm">Modificar</a>
+                        <a href="form-modificar.php?id=<?=$row['id']?>" class="btn btn-warning btn-sm">Modificar</a>
                         <a href="delete.php?id=<?=$row['id']?>" class="btn btn-danger btn-sm">Eliminar</a>
                     </td>
                 </tr>
