@@ -32,6 +32,10 @@
     <h1 class="text-center mb-4">Formulario de Alta de Caballero</h1>
     
     <form action="modify.php?id=<?=$id?>&nombre=<?=$nombre?>&fuerza=<?=$fuerza?>&ataque=<?=$ataque?>&defensa=<?=$defensa?>&experiencia=<?=$experiencia?>&fecha_nacimiento=<?=$fecha_nacimiento?>&activo=<?=$activo?>" method="get">
+
+        <!-- Input oculto para pasar el ID -->
+         <input type="hidden" name="id" value="<?=$id?>">
+
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombre del Caballero</label>
             <input type="text" class="form-control" id="nombre" placeholder="Ingresa el nombre" name="nombre" value="<?=$nombre?>">
@@ -75,8 +79,6 @@
                     <option value="1">Sí</option>
                 <?php
                 } ?>
-                
-                
             </select>
         </div>
 

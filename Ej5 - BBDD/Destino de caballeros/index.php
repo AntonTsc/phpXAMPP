@@ -17,6 +17,7 @@
 
 <div class="container mt-5">
     <h1 class="text-center mb-4">Lista de Caballeros</h1>
+    <a href="form-insertar.php" class="btn btn-info btn-md">Insertar</a>
     
     <table class="table table-striped table-bordered">
         <thead class="bg-dark text-white">
