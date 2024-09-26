@@ -31,40 +31,40 @@
 <div class="container mt-5">
     <h1 class="text-center mb-4">Formulario de Alta de Caballero</h1>
     
-    <form action="modify.php?id=<?=$id?>" method="get">
+    <form action="modify.php?id=<?=$id?>&nombre=<?=$nombre?>&fuerza=<?=$fuerza?>&ataque=<?=$ataque?>&defensa=<?=$defensa?>&experiencia=<?=$experiencia?>&fecha_nacimiento=<?=$fecha_nacimiento?>&activo=<?=$activo?>" method="get">
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombre del Caballero</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Ingresa el nombre" value="<?=$nombre?>">
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresa el nombre" name="nombre" value="<?=$nombre?>">
         </div>
         
         <div class="mb-3">
             <label for="fuerza" class="form-label">Fuerza</label>
-            <input type="number" class="form-control" id="fuerza" placeholder="Ingresa el nivel de fuerza" value="<?=$fuerza?>" required>
+            <input type="number" class="form-control" id="fuerza" placeholder="Ingresa el nivel de fuerza" name="fuerza" value="<?=$fuerza?>" required>
         </div>
 
         <div class="mb-3">
             <label for="ataque" class="form-label">Ataque</label>
-            <input type="number" class="form-control" id="ataque" placeholder="Ingresa el nivel de ataque" value="<?=$ataque?>" required>
+            <input type="number" class="form-control" id="ataque" placeholder="Ingresa el nivel de ataque" name="ataque" value="<?=$ataque?>" required>
         </div>
 
         <div class="mb-3">
             <label for="defensa" class="form-label">Defensa</label>
-            <input type="number" class="form-control" id="defensa" placeholder="Ingresa el nivel de defensa" value="<?=$defensa?>" required>
+            <input type="number" class="form-control" id="defensa" placeholder="Ingresa el nivel de defensa" name="defensa" value="<?=$defensa?>" required>
         </div>
 
         <div class="mb-3">
             <label for="experiencia" class="form-label">Experiencia</label>
-            <input type="number" class="form-control" id="experiencia" placeholder="Ingresa la experiencia acumulada" value="<?=$experiencia?>" required>
+            <input type="number" class="form-control" id="experiencia" placeholder="Ingresa la experiencia acumulada" name="experiencia" value="<?=$experiencia?>" required>
         </div>
 
         <div class="mb-3">
             <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
-            <input type="date" class="form-control" id="fecha_nacimiento" value="<?=$fecha_nacimiento?>" required>
+            <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="<?=$fecha_nacimiento?>" required>
         </div>
 
         <div class="mb-3">
             <label for="activo" class="form-label">¿Está activo?</label>
-            <select class="form-select" id="activo" required>
+            <select class="form-select" id="activo" name="activo" required>
                 <?php
                 if($activo == 1){ ?>
                     <option value="1">Sí</option>

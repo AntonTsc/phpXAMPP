@@ -1,6 +1,4 @@
 <?php
-
-//Ta mal, arreglar codigo
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
         $nombre = $_GET['nombre'];
@@ -18,5 +16,7 @@
         $sentencia->close();
 
         header("Location: index.php");
+    } else{
+        echo "error";
     }
 ?>
