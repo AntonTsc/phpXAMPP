@@ -1,7 +1,3 @@
-<?php
-    $mysqli = new mysqli("localhost", "root", "", "destinocaballeros");
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,7 +12,7 @@
 <div class="container mt-5">
     <h1 class="text-center mb-4">Formulario de Alta de Caballero</h1>
     
-    <form action="insert.php?nombre=<?=$?>" method="get">
+    <form action="insert.php" method="post">
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombre del Caballero</label>
             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa el nombre" required>

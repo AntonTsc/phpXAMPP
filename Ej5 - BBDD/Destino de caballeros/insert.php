@@ -1,16 +1,16 @@
 <?php
-    $nombre = $_GET['nombre'];
-    $fuerza = $_GET['fuerza'];
-    $ataque = $_GET['ataque'];
-    $defensa = $_GET['defensa'];
-    $experiencia = $_GET['experiencia'];
+    $nombre = $_POST['nombre'];
+    $fuerza = $_POST['fuerza'];
+    $ataque = $_POST['ataque'];
+    $defensa = $_POST['defensa'];
+    $experiencia = $_POST['experiencia'];
 
     //Fecha formateada
-    $fecha_nacimiento = $_GET['fecha_nacimiento'];
+    $fecha_nacimiento = $_POST['fecha_nacimiento'];
     $dateObject = DateTime::createFromFormat('Y-m-d', $fecha_nacimiento);
     $fechaFormateada = $dateObject -> format('Y-m-d');
 
-    $activo = $_GET['activo'];
+    $activo = $_POST['activo'];
 
     $mysqli = new mysqli("localhost", "root", "", "destinocaballeros");
     $sentencia = $mysqli->prepare("INSERT INTO caballeros(nombre, fuerza, ataque, defensa, experiencia, fecha_nacimiento, activo) VALUES (?,?,?,?,?,?,?)");

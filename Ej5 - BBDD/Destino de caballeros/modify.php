@@ -9,8 +9,7 @@
 
         //Fecha formateada
         $fecha_nacimiento = $_GET['fecha_nacimiento'];
-        $dateObject = DateTime::createFromFormat('Y-m-d', $fecha_nacimiento);
-        $fechaFormateada = $dateObject -> format('Y-m-d');
+        $fechaFormateada = DateTime::createFromFormat('Y-m-d', $fecha_nacimiento) -> format('Y-m-d');
 
         $activo = $_GET['activo'];
 

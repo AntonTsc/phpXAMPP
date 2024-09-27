@@ -15,6 +15,7 @@
     $activo = $linea['activo'];
 
     $mysqli->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +32,7 @@
 <div class="container mt-5">
     <h1 class="text-center mb-4">Formulario de Alta de Caballero</h1>
     
-    <form action="modify.php?id=<?=$id?>&nombre=<?=$nombre?>&fuerza=<?=$fuerza?>&ataque=<?=$ataque?>&defensa=<?=$defensa?>&experiencia=<?=$experiencia?>&fecha_nacimiento=<?=$fecha_nacimiento?>&activo=<?=$activo?>" method="get">
+    <form action="modify.php" method="get">
 
         <!-- Input oculto para pasar el ID -->
          <input type="hidden" name="id" value="<?=$id?>">
@@ -69,21 +70,18 @@
         <div class="mb-3">
             <label for="activo" class="form-label">¿Está activo?</label>
             <select class="form-select" id="activo" name="activo" required>
-                <?php
-                if($activo == 1){ ?>
-                    <option value="1">Sí</option>
-                    <option value="0">No</option>
-                <?php
-                } else { ?>
-                    <option value="0">No</option>
-                    <option value="1">Sí</option>
-                <?php
-                } ?>
+                <!-- Terminar esto con el if abreviado -->
+                <option value="1" <?=$activo ? 'más grande' : 'más pequeño'?>>No</option>
+                <option value="0" >Sí</option>
             </select>
         </div>
 
         <button type="submit" class="btn btn-primary">Modificar datos</button>
     </form>
+    <form action="index.php">
+        <button type="submit" class="btn btn-primary">Volver</button>
+    </form>
+    
 </div>
 
 <!-- Bootstrap JS -->

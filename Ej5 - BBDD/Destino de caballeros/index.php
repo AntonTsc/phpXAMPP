@@ -2,6 +2,9 @@
      $mysqli = new mysqli("localhost", "root", "", "destinocaballeros");
      $resultado = $mysqli->query("SELECT * FROM caballeros");
 
+     //Hay que hacer un filtro en la parte superior de la pagina que salga un input, y una lupa, y que al darle la lupa, se recargue la pagina y te filtre la lista con los caballeros que en su nombre contengan lo que pongas en el string.
+
+     //Tambien hay que hacer un select que sale una lista con todos los caballeros, y luego al seleccionarlo, y con un boton al lado y apretarlo, hace la misma funcion que el boton de ver, que visualiza todos los datos del caballero.
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +53,7 @@
                         ?>
                     </td>
                     <td>
-                        <a href="#" class="btn btn-info btn-sm">Ver</a>
+                        <a href="ver.php?id=<?=$row['id']?>" class="btn btn-info btn-sm">Ver</a>
                         <a href="form-modificar.php?id=<?=$row['id']?>" class="btn btn-warning btn-sm">Modificar</a>
                         <a href="delete.php?id=<?=$row['id']?>" class="btn btn-danger btn-sm">Eliminar</a>
                     </td>
