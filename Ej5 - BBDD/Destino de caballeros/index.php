@@ -15,12 +15,24 @@
     <title>Lista de Caballeros</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    </style>
 </head>
 <body>
 
 <div class="container mt-5">
     <h1 class="text-center mb-4">Lista de Caballeros</h1>
     <a href="form-insertar.php" class="btn btn-info btn-md">Insertar</a>
+
+    <!-- Filtro -->
+    <input type="text" class="filtro">
+    <a href="google.com">
+        <img src="img/magnifying-glass-svgrepo-com.svg">
+    </a>
     
     <table class="table table-striped table-bordered">
         <thead class="bg-dark text-white">
