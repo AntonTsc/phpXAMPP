@@ -1,5 +1,5 @@
 <?php
-    class Mario extends Personaje{
+    $personaje = new Personaje();
 
-    }
+    
 ?>

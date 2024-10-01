@@ -4,6 +4,7 @@
         protected $puntosDeVida;
         protected $fuerza;
 
+        //Constructor
         public function __construct($nombre, $puntosDeVida, $fuerza)
         {
             $this->nombre = $nombre;
@@ -11,12 +12,54 @@
             $this->fuerza = $fuerza;
         }
 
-        //Hay que hacer getters y setters creo
-
-        // abstract public function moverse();
-        // abstract public function atacar() : int;
-        // abstract public function recibirDano($dano);
+        //Getters y setters
         
+        public function getNombre()
+        {
+                return $this->nombre;
+        }
+
+        public function setNombre($nombre)
+        {
+                $this->nombre = $nombre;
+
+                return $this;
+        }
+
+        public function getPuntosDeVida()
+        {
+                return $this->puntosDeVida;
+        }
+
+        public function setPuntosDeVida($puntosDeVida)
+        {
+                $this->puntosDeVida = $puntosDeVida;
+
+                return $this;
+        }
+
+        public function getFuerza()
+        {
+                return $this->fuerza;
+        }
+
+        public function setFuerza($fuerza)
+        {
+                $this->fuerza = $fuerza;
+
+                return $this;
+        }
+
+        //Funciones
+        public function moverse(){
+            echo "Se mueve.";
+        }
+        
+        abstract public function atacar() : int;
+
+        public function recibirDano($dano){
+            echo "Has perdido " . $this->getPuntosDeVida() - $dano . " puntos de salud.";
+        }
     }
     
 ?>
