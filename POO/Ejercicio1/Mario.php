@@ -1,5 +1,0 @@
-<?php
-    $personaje = new Personaje();
-
-    
-?>

@@ -5,15 +5,14 @@
         protected $fuerza;
 
         //Constructor
-        public function __construct($nombre, $puntosDeVida, $fuerza)
-        {
-            $this->nombre = $nombre;
-            $this->puntosDeVida = $puntosDeVida;
-            $this->fuerza = $fuerza;
-        }
+        // public function __construct($nombre, $puntosDeVida, $fuerza)
+        // {
+        //     $this->nombre = $nombre;
+        //     $this->puntosDeVida = $puntosDeVida;
+        //     $this->fuerza = $fuerza;
+        // }
 
         //Getters y setters
-        
         public function getNombre()
         {
                 return $this->nombre;
@@ -51,9 +50,7 @@
         }
 
         //Funciones
-        public function moverse(){
-            echo "Se mueve.";
-        }
+        abstract public function moverse();
         
         abstract public function atacar() : int;
 
