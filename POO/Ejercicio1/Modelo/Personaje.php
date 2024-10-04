@@ -4,13 +4,11 @@
         protected $puntosDeVida;
         protected $fuerza;
 
-        //Constructor
-        // public function __construct($nombre, $puntosDeVida, $fuerza)
-        // {
-        //     $this->nombre = $nombre;
-        //     $this->puntosDeVida = $puntosDeVida;
-        //     $this->fuerza = $fuerza;
-        // }
+        public function __construct($nombre, $puntosDeVida, $fuerza){
+                $this->nombre = $nombre;
+                $this->puntosDeVida = $puntosDeVida;
+                $this->fuerza = $fuerza;
+        }
 
         //Getters y setters
         public function getNombre()
@@ -55,7 +53,11 @@
         abstract public function atacar() : int;
 
         public function recibirDano($dano){
-            echo "Has perdido " . $this->getPuntosDeVida() - $dano . " puntos de salud.";
+            echo $this->getNombre() . " ha perdido " . $dano . " puntos de salud.<br>";
+            echo $this->getNombre() . " vida anterior: " . $this->getPuntosDeVida() . "<br>";
+            $this->setPuntosDeVida($this->getPuntosDeVida() - $dano);
+            echo $this->getNombre() . " vida actual: " . $this->getPuntosDeVida() . "<br>";
+            
         }
     }
     

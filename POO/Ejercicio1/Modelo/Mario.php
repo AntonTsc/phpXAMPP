@@ -2,22 +2,31 @@
     include_once 'Personaje.php';
     include_once 'Salta.php';
     
-    class Mario extends Personaje{
-        private $habilidadEspecial = "Lanzar fuego";
+    class Mario extends Personaje implements Salta{
+        private String $habilidadEspecial;
+
+        public function __construct($nombre = "Mario", $puntosDeVida = 100, $fuerza = 50, $habilidadEspecial = "Lanzar fuego") {
+            parent::__construct($nombre, $puntosDeVida, $fuerza);
+            $this->habilidadEspecial = $habilidadEspecial;
+        }
 
         public function moverse()
         {
-            echo "Mario se mueve.";
+            echo $this->getNombre() . " se mueve.<br>";
         }
 
         public function atacar() : int
         {
-            return 10;
+            echo $this->getNombre() . " ataca.<br>";
+            return $this->getFuerza();
         }
 
-        public function recibirDano($dano)
-        {
-            echo "";
+        public function saltar(){
+            echo $this->getNombre() . " salta.<br>";
+        }
+
+        public function habilidadEspecial(){
+            echo $this->getNombre() . " usa su habilidad especial <b>" . $this->habilidadEspecial . "</b><br>";
         }
     }
 

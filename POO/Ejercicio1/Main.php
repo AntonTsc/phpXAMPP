@@ -1,8 +1,24 @@
 <?php
-    //https://medium.com/@Amir_M4A/in-the-world-of-php-programming-there-are-several-key-concepts-that-developers-need-to-understand-b2ed1916287f
-
-    include 'Modelo/Mario.php';
+    include_once 'Modelo/Mario.php';
+    include_once 'Modelo/Luigi.php';
+    include_once 'Modelo/Goomba.php';
 
     $Mario = new Mario();
+    $Luigi = new Luigi();
+    $Goomba = new Goomba();
+
+    //Mario
     $Mario->moverse();
+    $Mario->atacar();
+    $Mario->recibirDano($Luigi->atacar());
+    $Mario->saltar();
+    $Mario->habilidadEspecial();
+    //Luigi
+    $Luigi->moverse();
+    $Luigi->atacar();
+    $Luigi->saltar();
+    //Goomba
+    $Goomba->moverse();
+    $Goomba->atacar();
+
 ?>
