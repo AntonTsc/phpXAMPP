@@ -4,8 +4,8 @@
     class Goomba extends Enemigo{
         private int $velocidad;
 
-        public function __construct($nombre = "Goomba", $puntosDeVida = 25, $fuerza = 5, $velocidad = 15){
-            parent::__construct($nombre, $puntosDeVida, $fuerza);
+        public function __construct($nombre = "Goomba", $puntosDeVida = 25, $fuerza = 5, $poder = 60, $velocidad = 15){
+            parent::__construct($nombre, $puntosDeVida, $fuerza, $poder);
             $this->velocidad = $velocidad;
         }
 

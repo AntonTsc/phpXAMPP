@@ -2,10 +2,12 @@
     include_once 'Modelo/Mario.php';
     include_once 'Modelo/Luigi.php';
     include_once 'Modelo/Goomba.php';
+    include_once 'Modelo/Koopa.php';
 
     $Mario = new Mario();
     $Luigi = new Luigi();
     $Goomba = new Goomba();
+    $Koopa = new Koopa();
 
     //Mario
     $Mario->moverse();
@@ -20,5 +22,7 @@
     //Goomba
     $Goomba->moverse();
     $Goomba->atacar();
-
+    //Koopa
+    $Koopa->moverse();
+    $Koopa->atacar();
 ?>
