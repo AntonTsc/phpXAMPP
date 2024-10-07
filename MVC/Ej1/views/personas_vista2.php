@@ -9,7 +9,7 @@
     <table>
         <tr>
             <td>Nombre</td>
-            <td>Edad</td>
+            <td>Estatura</td>
         </tr>
 
         <?php foreach($datos as $dato){ ?>

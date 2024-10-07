@@ -3,5 +3,5 @@
     $per = new personas_modelo();
     $datos = $per->get_personas();
 
-    require_once("views/personas_vista2.php");
+    require_once("views/personas_vista1.php");
 ?>
