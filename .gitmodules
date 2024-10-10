@@ -1,0 +1,9 @@
+[submodule "Destino-de-caballeros-con-MVC"]
+	path = Destino-de-caballeros-con-MVC
+	url = https://github.com/AntonTsc/Destino-de-caballeros-con-MVC.git
+[submodule "MVC/Destino-de-caballeros-con-MVC"]
+	path = MVC/Destino-de-caballeros-con-MVC
+	url = https://github.com/AntonTsc/Destino-de-caballeros-con-MVC.git
+[submodule "MVC/Ej3/Destino-de-caballeros-con-MVC"]
+	path = MVC/Ej3/Destino-de-caballeros-con-MVC
+	url = https://github.com/AntonTsc/Destino-de-caballeros-con-MVC.git
